@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты поиска</title>
+</head>
+<body>
+<center>
+{% block content %}
+    <a href="/index"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_Google_2013_Official.svg/1125px-Logo_Google_2013_Official.svg.png"  width="400"></a>
+<br>
+    <h2>Вот что получилось:</h2>
+    <br>
+<table>
+<tr>
+<th>Result</th>
+</tr>
+{% for item in res %}
+<tr>
+<td>{{item}}</td>
+</tr>
+<br>
+{% endfor %}
+</table>
+     <a href="/index">Стартовая страница</a>
+{% endblock %}
+</body>
+</html>
